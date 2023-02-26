@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="doc-report.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+
+<body>
+    <nav>
+        <div class="menu-icon">
+            <span class="fas fa-bars"></span>
+        </div>
+        <div class="logo">
+            DispenseTheMeds
+        </div>
+        <div class="nav-items">
+            <li><a href="doctor-home">Home</a></li>
+            <li><a href="daboutus">About</a></li>
+
+
+            <li class="welcome">
+
+                <a href="">Welcome</a> <!--name have to be addeed-->
+                <ul class="dropdown">
+                    <li><a href="dprofile">My Profile</a></li>
+                    <li><a href="login">Logout</a></li>
+                </ul>
+
+            </li>
+        </div>
+        <div class="search-icon">
+            <span class="fas fa-search"></span>
+        </div>
+        <div class="cancel-icon">
+            <span class="fas fa-times"></span>
+        </div>
+        <form action="#">
+            <input type="search" class="search-data" placeholder="Search" required>
+            <button type="submit" class="fas fa-search"></button>
+        </form>
+    </nav>
+    <script>
+        const menuBtn = document.querySelector(".menu-icon span");
+        const searchBtn = document.querySelector(".search-icon");
+        const cancelBtn = document.querySelector(".cancel-icon");
+        const items = document.querySelector(".nav-items");
+        const form = document.querySelector("form");
+        menuBtn.onclick = () => {
+            items.classList.add("active");
+            menuBtn.classList.add("hide");
+            searchBtn.classList.add("hide");
+            cancelBtn.classList.add("show");
+        }
+        cancelBtn.onclick = () => {
+            items.classList.remove("active");
+            menuBtn.classList.remove("hide");
+            searchBtn.classList.remove("hide");
+            cancelBtn.classList.remove("show");
+            form.classList.remove("active");
+            cancelBtn.style.color = "#ff3d00";
+        }
+        searchBtn.onclick = () => {
+            form.classList.add("active");
+            searchBtn.classList.add("hide");
+            cancelBtn.classList.add("show");
+        }
+    </script>
+
+    <input type="checkbox" id="check">
+    <label for="check">
+        <i class="fas fa-bars" id="btn"></i>
+        <i class="fas fa-times" id="cancel"></i>
+    </label>
+    <div class="sidebar">
+        <a href="doc-stud" class="active">
+            <i class="fas fa-qrcode"></i>
+            <span>Dashboard</span>
+        </a>
+        <a href="#">
+            <i class="fas fa-stream"></i>
+            <span>Profile</span>
+        </a>
+        <a href="#">
+            <i class="fas fa-link"></i>
+            <span>Prescriptions</span>
+        </a>
+        <a href="#">
+            <i class="fas fa-link"></i>
+            <span>Reports</span>
+        </a>
+    </div>
+
+    <div>
+        <h2>TEST REPORT</h2>
+        <form action="/doc_report" method="POST">
+        <table>
+            <tr>
+                <th >Test Type</th>
+                <th >Result</th>
+                <th >Units</th>
+                <th >Reference Data</th>
+            </tr>
+            <tr>
+                <td>
+                    <select name="testType" method="post" class="select">
+                        <option value="volvo">HB</option>
+                        <option value="saab">TLC</option>
+                        <option value="mercedes">MP</option>
+                        <option value="audi">VDRL</option>
+                    </select>
+                </td>
+                <td>
+                        <input name="Result" type="text" value="">
+                </td>
+                <td>
+                    <select name="Units" class="select">
+                        <option value="volvo">gm/dl</option>
+                        <option value="saab">th/cumm</option>
+                        <option value="mercedes">-</option>
+                        <option value="audi">-</option>
+                    </select>
+                </td>
+                <td>
+                    <select name="ReferenceData" class="select">
+                        <option value="volvo">12.0-15.0</option>
+                        <option value="saab">4.0-10.0</option>
+                        <option value="mercedes">Positive/Negative</option>
+                        <option value="audi">Positive/Negative</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        
+            <input name="" id="save" type="submit" value="Save">
+        </form>
+    </div>
+</body>
+
+</html>

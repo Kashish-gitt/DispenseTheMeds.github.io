@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="daboutus.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+
+<body>
+    <nav>
+        <div class="menu-icon">
+            <span class="fas fa-bars"></span>
+        </div>
+        <div class="logo">
+            DispenseTheMeds
+        </div>
+        <div class="nav-items">
+            <li><a href="doctor-home">Home</a></li>
+            <li><a href="daboutus">About</a></li>
+
+
+            <li class="welcome">
+
+                <a href="">Welcome</a> 
+                <ul class="dropdown">
+                    <li><a href="dprofile">My Profile</a></li>
+                    <li><a href="login">Logout</a></li>
+                </ul>
+
+            </li>
+        </div>
+        <div class="search-icon">
+            <span class="fas fa-search"></span>
+        </div>
+        <div class="cancel-icon">
+            <span class="fas fa-times"></span>
+        </div>
+        <form action="#">
+            <input type="search" class="search-data" placeholder="Search" required>
+            <button type="submit" class="fas fa-search"></button>
+        </form>
+    </nav>
+
+    <div class="details">
+        <p class="para1">The dispensary is the heartbeat of the institute which provide Treatment for different diseases
+            and also
+            provide first aid to the injured, and also arranges different awareness camp Like cardiac camp, BMD camp
+            etc. Different updates are been circulated for prevention from the seasonal disease.<br>
+        <br>All the National Programmes such as Pulse polio, and Immunization programmes are organized with the help of
+            Local health Authorities.<br>
+        <br>Dispensary is also equipped with the Pathological lab to carry out different investigations. In
+            case of
+            medical emergency, the ambulance van is available 24 hours for taking patient(s) to other hospitals for the
+            required treatment.</p>
+        <div class="contact">
+            <h2 class="disp">Dispensary Details</h2>
+            <h3>Contact No.</h3>
+            <p>xxxxxxxxxx</p>
+            <h3 class="disp">Email-Id</h3>
+            <p>dispensary.nitj.ac.in</p>
+            <h3 class="disp">Address</h3>
+            <p>Dispensary,near girls hostel</p>
+            <h3 class="disp">Ambulance Emergency Number</h3>
+            <p>xxxxxxxxxx</p>
+            <h2 class="disp">Contact Us</h2>
+            <h3 class="disp">For technical issues</h3>
+            <p>technicalteam.nitj.ac.in</p>
+        </div>
+
+
+    </div>
+</body>
+<script>
+    const menuBtn = document.querySelector(".menu-icon span");
+    const searchBtn = document.querySelector(".search-icon");
+    const cancelBtn = document.querySelector(".cancel-icon");
+    const items = document.querySelector(".nav-items");
+    const form = document.querySelector("form");
+    menuBtn.onclick = () => {
+        items.classList.add("active");
+        menuBtn.classList.add("hide");
+        searchBtn.classList.add("hide");
+        cancelBtn.classList.add("show");
+    }
+    cancelBtn.onclick = () => {
+        items.classList.remove("active");
+        menuBtn.classList.remove("hide");
+        searchBtn.classList.remove("hide");
+        cancelBtn.classList.remove("show");
+        form.classList.remove("active");
+        cancelBtn.style.color = "#ff3d00";
+    }
+    searchBtn.onclick = () => {
+        form.classList.add("active");
+        searchBtn.classList.add("hide");
+        cancelBtn.classList.add("show");
+    }
+</script>
+
+</html>

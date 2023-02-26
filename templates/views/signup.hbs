@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up page</title>
+    <link rel="stylesheet" href="signup.css">
+    
+</head>
+<body>
+    {{!-- {{>navbar}} --}}
+    <div class="form">
+        <div class="main">
+    <form method="post" action="/signup" id="signform">
+        <label>SIGN UP</label>
+
+    <input type="text" id="name" placeholder="John" name="name">
+  
+    <input type="text" id="Roll no" placeholder="21112036" name="RollNo">
+    <input type="text" id="Blood Group" placeholder="B+" name="BloodGroup">
+    <input type="text" id="Gender" placeholder="M" name="Gender">
+    <input type="text" id="Age" placeholder="14" name="Age">
+    <input type="text" id="Mobile number" placeholder="9873730934" name="MobileNumber">
+    <input type="email" id="email" placeholder="xxxx@gmail.com" name="email">
+
+    <input type="password" id="password" placeholder="xxxxx" name="password">
+   
+        <button type="submit">Sign Up</button>
+
+
+</form>
+</div>
+</div>
+</body>
+
+<script src="app.js"></script>
+
+
+</html>

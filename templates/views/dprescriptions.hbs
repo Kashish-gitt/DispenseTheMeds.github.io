@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Prescriptions</title>
+    <link rel="stylesheet" href="dprescriptions.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b7ff9ce5d5.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    
+    <nav>
+        <div class="menu-icon">
+            <span class="fas fa-bars"></span>
+        </div>
+        <div class="logo">
+            DispenseTheMeds
+        </div>
+        <div class="nav-items">
+            <li><a href="doctor-home">Home</a></li>
+            <li><a href="daboutus">About</a></li>
+
+
+            <li class="welcome">
+
+                <a href="">Welcome</a> <!--name have to be addeed-->
+                <ul class="dropdown">
+                    <li><a href="dprofile">My Profile</a></li>
+                    <li><a href="login">Logout</a></li>
+                </ul>
+
+            </li>
+        </div>
+        <div class="search-icon">
+            <span class="fas fa-search"></span>
+        </div>
+        <div class="cancel-icon">
+            <span class="fas fa-times"></span>
+        </div>
+        <form action="#">
+            <input type="search" class="search-data" placeholder="Search" required>
+            <button type="submit" class="fas fa-search"></button>
+        </form>
+    </nav>
+    <input type="checkbox" id="check">
+    <label for="check">
+        <i class="fas fa-bars" id="btn"></i>
+        <i class="fas fa-times" id="cancel"></i>
+    </label>
+    <div class="sidebar">
+        <a href="doc-stud" class="active">
+            <i class="fas fa-qrcode"></i>
+            <span>Dashboard</span>
+        </a>
+        <a href="#">
+            <i class="fas fa-stream"></i>
+            <span>Profile</span>
+        </a>
+        <a href="#">
+            <i class="fas fa-link"></i>
+            <span>Prescriptions</span>
+        </a>
+        <a href="#">
+            <i class="fas fa-link"></i>
+            <span>Reports</span>
+        </a>
+    </div>
+    <div class="table">
+    <h1 class="presc">Prescription</h1><br><br>
+    <form action="/dprescriptions" method="post" >
+
+        <table>
+            <tr>
+                <th>Sr. No.</th>
+                <th>Medicines/Drugs</th>
+                <th>Frequency per day</th>
+                <th>No. of days</th>
+            </tr>
+            <tr>
+                <td>
+                    
+                        <input name="one" type="text" value="">
+
+                    
+                </td>
+                <td>
+
+                        <input name="medicine" type="text" value="">
+
+                </td>
+                <td>
+
+                        <input name="frequency" type="text" value="">
+
+                   
+                </td>
+                <td>
+
+                        <input name="days" type="text" value="">
+
+                
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    
+
+                        <input name="two" type="text" value="">
+
+                   
+                </td>
+                <td>
+                   
+
+                        <input name="medicine2" type="text" value="">
+
+                   
+                </td>
+                <td>
+                    
+
+                        <input name="frequency2" type="text" value="">
+
+                </td>
+                <td>
+
+                        <input name="days2" type="text" value="">
+
+                    
+                </td>
+            </tr>
+            <tr>
+                <td>
+
+
+                        <input name="three" type="text" value="">
+
+                    
+                </td>
+                <td>
+                   
+
+                        <input name="medicine3" type="text" value="">
+
+                  
+                </td>
+                <td>
+                   
+
+                        <input name="frequency3" type="text" value="">
+
+                   
+                </td>
+                <td>
+
+                        <input name="days3" type="text" value="">
+
+                  
+                </td>
+            </tr>
+            <tr>
+                <td>
+                  
+
+                        <input name="four" type="text" value="">
+
+                </td>
+                <td>
+                    
+
+                        <input name="medicine4" type="text" value="">
+
+                    
+                </td>
+                <td>
+                   
+
+                        <input name="frequency4" type="text" value="">
+
+                   
+                </td>
+                <td>
+
+                        <input name="days4" type="text" value="">
+
+                    
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    
+
+                        <input name="five" type="text" value="">
+
+                    
+                </td>
+                <td>
+
+                        <input name="medicine5" type="text" value="">
+
+                   
+                </td>
+                <td>
+                    
+                        <input name="frequency5" type="text" value="">
+
+                   
+                </td>
+                <td>
+                    
+
+                        <input name="days5" type="text" value="">
+
+                  
+                </td>
+                
+            </tr>
+        </table>
+
+
+
+        <table>
+            <tr>
+                <th>Sr. No.</th>
+                <th>Tests suggested</th>
+                <th>Follow up after</th>
+            </tr>
+            <tr>
+                <td>
+                    
+
+                        <input name="six" type="text" value="">
+
+                    
+                </td>
+                <td>
+                    
+
+                        <input name="TestSugg1" type="text" value="">
+
+                   
+                </td>
+                <td>
+                    
+
+                        <input name="After1" type="text" value="">
+
+                    
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input name="seven" type="text" value="">
+                </td>
+                <td>
+                     <input name="TestSugg2" type="text" value="">
+                </td>
+                <td>
+                     <input name="After2" type="text" value="">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                     <input name="eight" type="text" value="">
+                </td>
+                <td>
+                     <input name="TestSugg3" type="text" value="">
+                </td>
+                <td>
+                     <input name="After3" type="text" value="">
+                </td>
+            </tr>
+
+        </table>
+        <br>
+       
+            <input name="" id="save" type="submit" value="Save">
+        </form>
+    </div>
+
+</body>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dispense the Meds</title>
+    <link rel="stylesheet" href="doctor-home.css">
+    <script src="https://kit.fontawesome.com/b7ff9ce5d5.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b7ff9ce5d5.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <nav>
+        <div class="menu-icon">
+            <span class="fas fa-bars"></span>
+        </div>
+        <div class="logo">
+            DispenseTheMeds
+        </div>
+        <div class="nav-items">
+            <li><a href="doctor-home">Home</a></li>
+            <li><a href="daboutus">About</a></li>
+
+
+            <li class="welcome">
+
+                <a href="">Welcome</a>
+                <ul class="dropdown">
+
+                    <li><a href="dprofile">My Profile</a></li>
+
+                    <li><a href="login">Logout</a></li>
+
+                </ul>
+
+            </li>
+        </div>
+        <div class="search-icon">
+            <span class="fas fa-search"></span>
+        </div>
+        <div class="cancel-icon">
+            <span class="fas fa-times"></span>
+        </div>
+        <form action="#">
+            <input type="search" class="search-data" placeholder="Search" required>
+            <button type="submit" class="fas fa-search"></button>
+            <i class="fa-thin fa-magnifying-glass"></i>
+        </form>
+    </nav>
+    <div class="health">
+    <p>Health is wealth. It is the biggest asset we need every day to meet our goals. Previously, the definition of health was the proper functioning of our organ systems. As time passed, the definition has changed. Good health now includes the physical and mental wellbeing of a person. A person can be physically fit but mentally disturbed due to the circumstances he is facing. The same can happen when someone is suffering from physical illnesses but is mentally strong.
+
+
+Maintaining proper health is the prime concern these days. This is a competitive era where you cannot stop. The moment you stop you will be replaced by a better option. This is why everyone is running in the rat race without thinking about their wellbeing. The compromise towards health becomes a costly affair later. In the cities, people are more affected by mental issues than physical ones. Constant stress and lack of physical activities contribute to the problem.
+
+
+Proper health comprises many factors. It includes good food, proper routine, good sleeping habits, and eating habits. Apart from these personal traits, many external factors also control your wellbeing. People in the villages stay physically stronger due to freshness in the air, physical activities, and good food. People in the urban areas, on the contrary, prefer eating unhealthy food, lack physical agility, and cannot handle mental stress properly. In the same context, urban settlement has a better lifestyle and healthcare system. Considering all the components, a person needs to give equal importance to the factors and maintain a balance.
+
+
+The elements of good health are physical and mental fitness. If both are maintained, a person will enjoy a better life. How can we achieve that state? First, we have to find out the factors influencing physical health. We have to learn about the lifestyle diseases that affect our health and check the ways to avoid or manage them. Secondly, we have to eat good food and maintain a healthy diet. We need to ensure a balanced diet and good food habits to provide nutrition to our systems. In this aspect, we also have to find out the harmful foods we generally prefer eating and avoid them. Regular exercise is the third most important part of good health. When we are physically active, our muscles remain functional. We get hurt very less and also recover faster. We can also maintain our body balance better when we are involved in physical activities.</p>
+
+</div>
+
+    <script>
+        const menuBtn = document.querySelector(".menu-icon span");
+        const searchBtn = document.querySelector(".search-icon");
+        const cancelBtn = document.querySelector(".cancel-icon");
+        const items = document.querySelector(".nav-items");
+        const form = document.querySelector("form");
+        menuBtn.onclick = () => {
+            items.classList.add("active");
+            menuBtn.classList.add("hide");
+            searchBtn.classList.add("hide");
+            cancelBtn.classList.add("show");
+        }
+        cancelBtn.onclick = () => {
+            items.classList.remove("active");
+            menuBtn.classList.remove("hide");
+            searchBtn.classList.remove("hide");
+            cancelBtn.classList.remove("show");
+            form.classList.remove("active");
+            cancelBtn.style.color = "#ff3d00";
+        }
+        searchBtn.onclick = () => {
+            form.classList.add("active");
+            searchBtn.classList.add("hide");
+            cancelBtn.classList.add("show");
+        }
+    </script>
+
+</body>
+<footer>
+    <div class="footer-container">
+        <div class="left-col">
+            <img src="logo.png" alt="" class="logo">
+            <div class="social-media">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <p class="rights-text">© 2021 Created By <b>FantacyDesigns</b> All Rights Reserved.</p>
+        </div>
+
+        <div class="right-col">
+            <h1>Our Newsletter</h1>
+            <div class="border"></div>
+            <p>Enter Your Email to get our news and updates.</p>
+            <form action="" class="newsletter-form">
+                <input type="text" class="txtb" placeholder="Enter Your Email">
+                <input type="submit" class="btn" value="submit">
+            </form>
+        </div>
+    </div>
+</footer>
+
+</html>
