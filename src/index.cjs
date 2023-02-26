@@ -50,14 +50,20 @@ app.get("/dprofile",(req,res)=>{
 app.get("/saboutus",(req,res)=>{
     res.render("saboutus");
 })
+// app.get("/sprofile",(req,res)=>{
+//    res.render("sprofile");
+    
+ //})
 app.get("/sprofile",(req,res)=>{
-    res.render("sprofile");
+    
     Login.find({}, function(err,logins){
+        console.log(logins);
         if(logins){
-            return res.render('dprofile',{
-                logins
+            return res.render('sprofile',{
+                l:logins
             })
         }
+        res.render("logins");
     });
 })
 app.get("/ssample",(req,res)=>{
